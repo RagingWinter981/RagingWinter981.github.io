@@ -1,0 +1,288 @@
+/* ===========================
+   Project Header
+=========================== */
+.project-header {
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.project-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.project-header p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===========================
+   Project Layout: Timeline + Right Column
+=========================== */
+.project-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin: 2rem auto;
+}
+
+/* Timeline (Left Column) */
+/* Timeline Layout */
+.timeline {
+  flex: 1;
+  border-left: 3px solid #0077cc;
+  padding-left: 2rem;
+  margin-left: 1rem;
+  background: linear-gradient(180deg, #e0f7ff 0%, #ffffff 100%);
+  border-radius: 8px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
+}
+
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.3s; }
+.timeline-item:nth-child(3) { animation-delay: 0.5s; }
+.timeline-item:nth-child(4) { animation-delay: 0.7s; }
+
+/* Timeline Thumbnails */
+/* Thumbnails */
+.timeline-thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #0077cc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.timeline-thumb:hover {
+  transform: scale(1.1);
+}
+
+/* Modal Overlay */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.8);
+}
+
+/* Modal Image */
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  animation: zoomIn 0.3s ease;
+}
+
+/* Caption */
+#caption {
+  margin: 15px auto;
+  text-align: center;
+  color: #f1f1f1;
+  font-size: 1rem;
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ff6666;
+}
+
+/* Animation */
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+/* Text next to thumbnail */
+.timeline-text {
+  flex: 1;
+}
+
+.timeline-text .date {
+  font-weight: bold;
+  color: #0077cc;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -1.95rem;
+  top: 0.4rem;
+  width: 12px;
+  height: 12px;
+  background-color: #0077cc;
+  border-radius: 50%;
+}
+
+.timeline-item .date {
+  font-weight: bold;
+  color: #0077cc;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-icon {
+  position: absolute;
+  left: -3rem;
+  top: 0;
+  font-size: 1.2rem;
+  color: #0077cc;
+}
+
+/* Right Column */
+.project-right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Gallery */
+.project-gallery {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.project-gallery figure {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-gallery figure:hover img {
+  transform: scale(1.05);
+}
+
+.project-gallery figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Project Content */
+.project-content {
+  background: #f0f8ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.project-content h2, .project-content h3 {
+  color: #222;
+  margin-bottom: 1rem;
+}
+
+.project-content ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-content ul li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Learn More / GitHub Button */
+.project-content .learn-more {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #d84ef3;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.project-content .learn-more:hover {
+  background: #b43ed0;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+@media (max-width: 1024px) {
+  .project-layout {
+    flex-direction: column;
+  }
+  .timeline {
+    border-left: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+    position: relative;
+    top: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-header h1 {
+    font-size: 2rem;
+  }
+  .project-header p {
+    font-size: 1rem;
+  }
+  .project-gallery img {
+    height: 200px;
+  }
+}

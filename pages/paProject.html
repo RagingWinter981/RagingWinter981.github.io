@@ -1,0 +1,118 @@
+<body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Events Portal | Kylee Smith</title>
+  <link rel="stylesheet" href="../style/header.css">
+  <link rel="stylesheet" href="../style/body.css">
+  <link rel="stylesheet" href="../style/projects.css">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="topnav">
+    <a href="../index.html">Home</a>
+    <a href="../index.html#aboutMe">About Me</a>
+    <a href="../index.html#projects" class="active">Projects</a>
+    <a href="../index.html#hobbies">Hobbies</a>
+    <a href="../index.html#contact">Contact</a>
+  </div>
+
+  <!-- Project Layout: Timeline + Gallery + Details -->
+  <section class="project-layout">
+
+    <!-- Timeline (Left Column) -->
+    <aside class="timeline">
+    <div class="timeline-item">
+        <img src="../images/paProject/DBPlan.jpg" alt="Database Design Sketch" class="timeline-thumb" onclick="openModal(this)">
+        <div class="timeline-text">
+        <span class="date">Sept 2024</span>
+        <p>Planned database design, researched MongoDB, mapped workflows.</p>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <img src="../images/paProject/Presentation1.jpg" alt="UI Mockup" class="timeline-thumb" onclick="openModal(this)">
+        <div class="timeline-text">
+        <span class="date">Dec 2024</span>
+        <p>Created HTML templates and initial UI designs.</p>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <img src="../images/timeline/code-snippet.jpg" alt="Code Snippet" class="timeline-thumb" onclick="openModal(this)">
+        <div class="timeline-text">
+        <span class="date">Jan 2025</span>
+        <p>Implemented CRUD operations, began major development.</p>
+        </div>
+    </div>
+    <div class="timeline-item">
+        <img src="../images/timeline/symposium.jpg" alt="Symposium Presentation" class="timeline-thumb" onclick="openModal(this)">
+        <div class="timeline-text">
+        <span class="date">Apr 2025</span>
+        <p>Deployed project on Google Cloud, presented at Symposium.</p>
+        </div>
+    </div>
+    <script src="../scripts/project.js"></script>
+</aside>
+
+    <!-- Image Modal -->
+    <div id="imgModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+    <div id="caption"></div>
+    </div>
+    <!-- Right Column (Gallery + Content) -->
+    <div class="project-right">
+
+      <section class="project-header">
+        <h1>Campus Events Portal</h1>
+        <p>A web application to manage and track campus events with automated hour logging.</p>
+      </section>
+
+      <section class="project-gallery">
+        <figure>
+          <img src="../images/paProject/AdminDashboard.jpg" alt="Dashboard Screenshot">
+          <figcaption><i class="fa-solid fa-tachometer-alt"></i> Admin Dashboard View</figcaption>
+        </figure>
+        <figure>
+          <img src="../images/paProject/PAEventPage.jpg" alt="Event Details Screenshot">
+          <figcaption><i class="fa-solid fa-calendar-days"></i> Event Management for President Ambassadors</figcaption>
+        </figure>
+      </section>
+
+      <div class="project-content">
+        <h2>About This Project</h2>
+        <p>This project was completed during my coursework at St. Mary's University. It allows students and staff to track campus events, manage participants, and log hours automatically, reducing manual tracking by 50%.</p>
+
+        <h3>Technologies Used</h3>
+        <ul>
+          <li><i class="fa-brands fa-html5"></i> Frontend: EJS, HTML, CSS</li>
+          <li><i class="fa-brands fa-node-js"></i> Backend: Node.js, JavaScript</li>
+          <li><i class="fa-solid fa-database"></i> Database: MongoDB</li>
+        </ul>
+
+        <h3>Features</h3>
+        <ul>
+          <li><i class="fa-solid fa-user-plus"></i> User account creation and management</li>
+          <li><i class="fa-solid fa-chart-line"></i> Event tracking dashboard</li>
+          <li><i class="fa-solid fa-clock"></i> Automated hour logging for admins and PAs</li>
+        </ul>
+
+        <h3>Challenges & Learnings</h3>
+        <ul>
+          <li><strong>Learning MongoDB:</strong> Adapting to a non-relational mindset to handle irregular event fields.</li>
+          <li><strong>Working Solo:</strong> Managed full-stack development independently, balancing time and scope.</li>
+        </ul>
+
+        <a href="https://github.com/RagingWinter981/Senior-Project" class="learn-more">View on GitHub</a>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>
+
+

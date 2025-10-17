@@ -1,7 +1,63 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" href="style/header.css">
+        <link rel="stylesheet" href="style/body.css">
+        
+    </head>
 <body>
-<h1>Hello</h1>
-<p>My Name is Kylee</p>
+    <!-- Navigation Bar -->
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#aboutMe">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#hobbies">Hobbies</a>
+        <a href="#contact">Contact</a>
+    </div>
+    
+  <!-- Landing Section -->
+    <section class="landing">
+
+        <div class="image">
+            <img src="images/porfolioImage.JPEG" alt="Kylee Smith headshot">
+        </div>
+        
+        <div class="text">
+            <h1 class="name">Kylee Smith</h1>
+            <p class="bio">
+                I’m a software and cybersecurity engineer passionate about building secure, user-friendly applications. 
+                With experience in both software development and cyber, I love solving complex problems and turning ideas into reality.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Projects Carousel -->
+     <section id="projects">
+        <h2>Projects</h2>
+        <div class="carousel">
+            <div class="slide active">
+                <img src="screenshot1.png" alt="Project 1 Screenshot">
+                <h3>Campus Events Portal</h3>
+                <p>A web app to manage and track campus events with automated hour logging.</p>
+                <a href="pages/paProject.html" class="learn-more">Learn More</a>
+            </div>
+
+            <div class="slide">
+                <!-- <img src="screenshot2.png" alt="Project 2 Screenshot"> -->
+                <h3> In Development .... </h3>
+                <!-- <p>A Python tool for detecting and analyzing vulnerabilities in web apps.</p>
+                <a href="project2.html" class="learn-more">Learn More</a> -->
+            </div>
+
+        </div>
+
+        <!-- Carousel controls -->
+        <button class="prev">‹</button>
+        <button class="next">›</button>
+    </section>
+    <script src="scripts/carousel.js"></script>
 </body>
-</html>
