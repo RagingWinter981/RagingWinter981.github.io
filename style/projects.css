@@ -3,7 +3,7 @@
 =========================== */
 .project-header {
   text-align: center;
-  margin: 3rem auto;
+  margin: 2rem auto;
 }
 
 .project-header h1 {
@@ -22,24 +22,21 @@
 /* ===========================
    Project Layout: Timeline + Right Column
 =========================== */
-.project-layout {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-  margin: 2rem auto;
-}
 
 /* Timeline (Left Column) */
 /* Timeline Layout */
 .timeline {
-  flex: 1;
-  border-left: 3px solid #0077cc;
-  padding-left: 2rem;
-  margin-left: 1rem;
-  background: linear-gradient(180deg, #e0f7ff 0%, #ffffff 100%);
+  display: inline-block;
+  vertical-align: top;
+  width: 25%;
+  border-left: 3px solid #d84ef3;
+  padding-left: 1.5rem; /* Reduced padding-left */
+  margin-left: 0; /* Ensure no margin */
+  background: #ffffff;
   border-radius: 8px;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Added shadow for depth */
 }
 
 .timeline-item {
@@ -65,7 +62,7 @@
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #0077cc;
+  border: 2px solid #d84ef3;
   box-shadow: 0 2px 5px rgba(0,0,0,0.15);
   cursor: pointer;
   transition: transform 0.2s ease;
@@ -135,7 +132,7 @@
 
 .timeline-text .date {
   font-weight: bold;
-  color: #0077cc;
+  color: #d84ef3;
   display: block;
   margin-bottom: 0.3rem;
 }
@@ -148,17 +145,18 @@
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: -1.95rem;
+  left: -0.95rem; /* Adjusted to align with the new padding */
   top: 0.4rem;
   width: 12px;
   height: 12px;
-  background-color: #0077cc;
+  background-color: #d84ef3;
   border-radius: 50%;
+  border: 2px solid white;
 }
 
 .timeline-item .date {
   font-weight: bold;
-  color: #0077cc;
+  color: #d84ef3;
   display: block;
   margin-bottom: 0.3rem;
 }
@@ -168,34 +166,40 @@
   left: -3rem;
   top: 0;
   font-size: 1.2rem;
-  color: #0077cc;
+  color: #d84ef3;
 }
 
 /* Right Column */
 .project-right {
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  display: inline-block;
+  vertical-align: top;
+  width: 70%;
+  padding-left: 2rem;
 }
 
 /* Gallery */
 .project-gallery {
   display: flex;
-  gap: 1.5rem;
   flex-wrap: wrap;
+  gap: 1.5rem;
+  background: #ffffff; /* Added background for visual separation */
+  padding: 1.5rem; /* Added padding */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Added shadow */
 }
 
 .project-gallery figure {
+  flex: 1 1 calc(50% - 1.5rem); /* Make figures take up roughly half the space */
   position: relative;
   text-align: center;
   overflow: hidden;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .project-gallery img {
   width: 100%;
-  height: 300px;
+  height: 250px; /* Adjusted height for consistency */
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -209,18 +213,19 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.7);
   color: #fff;
   padding: 0.5rem;
   font-size: 0.9rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  justify-content: center;
 }
 
 /* Project Content */
 .project-content {
-  background: #f0f8ff;
+  background: #f9f9f9;
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
@@ -228,12 +233,18 @@
 
 .project-content h2, .project-content h3 {
   color: #222;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem; /* Increased spacing */
+  border-bottom: 2px solid #d84ef3;
+  padding-bottom: 0.5rem;
+}
+
+.project-content p {
+  margin-bottom: 1rem; /* Added spacing to paragraphs */
 }
 
 .project-content ul {
   margin-left: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem; /* Increased spacing */
 }
 
 .project-content ul li {
@@ -253,10 +264,12 @@
   border-radius: 6px;
   text-decoration: none;
   transition: background 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .project-content .learn-more:hover {
   background: #b43ed0;
+  transform: translateY(-2px);
 }
 
 /* ===========================
@@ -268,10 +281,15 @@
   }
   .timeline {
     border-left: none;
+    border-top: 3px solid #d84ef3;
     padding-left: 0;
     margin-bottom: 2rem;
     position: relative;
     top: auto;
+  }
+  .timeline-item::before {
+    left: 0.4rem;
+    top: -1.95rem;
   }
 }
 
