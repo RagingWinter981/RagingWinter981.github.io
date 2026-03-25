@@ -1,0 +1,38 @@
+/* Modern, clean navigation bar */
+.topnav {
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #333;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect */
+.topnav a:hover {
+  background-color: rgba(216, 78, 243, 0.1);
+  color: #d84ef3;
+}
+
+/* Active/current link */
+.topnav a.active {
+  background-color: #d84ef3;
+  color: white;
+}
+
+/* Right-aligned links */
+.topnav-right {
+  float: right;
+}
